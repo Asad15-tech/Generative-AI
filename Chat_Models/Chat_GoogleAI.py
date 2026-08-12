@@ -20,7 +20,7 @@ llm = ChatGoogleGenerativeAI(
 
 # Send a prompt to the Gemini model
 response = llm.invoke(
-    "Explain Artificial Intelligence in simple words."
+    "Why is Imran Khan in jail?"
 )
 
 # Print only the model's text response
