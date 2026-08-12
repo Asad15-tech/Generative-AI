@@ -1,0 +1,18 @@
+# Import ChatOpenAI from LangChain's OpenAI integration
+from langchain_openai import ChatOpenAI
+# Import load_dotenv to load environment variables from a .env file
+from dotenv import load_dotenv
+load_dotenv()
+
+# Create a ChatOpenAI model instance
+# The API key should be stored in the OPENAI_API_KEY environment variable
+llm = ChatOpenAI(
+    model="gpt-4o-mini",
+    temperature=0.7
+)
+
+# Send a message to the model
+response = llm.invoke("Explain Artificial Intelligence in simple words.")
+
+# Print the model's response
+print(response.content)
