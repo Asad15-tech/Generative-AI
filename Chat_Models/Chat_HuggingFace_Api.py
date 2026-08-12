@@ -13,7 +13,7 @@ load_dotenv()
 llm = HuggingFaceEndpoint(
     repo_id="meta-llama/Llama-3.1-8B-Instruct",
     task="text-generation",
-    max_new_tokens=512,
+    max_new_tokens=50,
     temperature=0.7
 )
 
