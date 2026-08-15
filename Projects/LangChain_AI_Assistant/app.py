@@ -24,7 +24,8 @@ from typing import Literal
 
 import streamlit as st
 
-from chatbot import get_response
+from chatbot import get_response, clear_memory
+
 
 # ============================================================
 # LOGGING
@@ -420,6 +421,7 @@ def render_sidebar() -> None:
         st.markdown("---")
         if st.button("🗑️ Clear Conversation", use_container_width=True):
             clear_messages()
+            clear_memory()
             st.rerun()
 
 
